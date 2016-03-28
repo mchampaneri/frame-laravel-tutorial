@@ -12,7 +12,12 @@ class CreateContentTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('contents', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('url');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateContentTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('contents');
     }
 }

@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/',function() {
+    return view('front.index');
+});
+Route::get('/admin', function () {
+    return view('admin.dashboard');
 });
 
 /*
