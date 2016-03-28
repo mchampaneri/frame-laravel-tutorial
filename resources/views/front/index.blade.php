@@ -78,7 +78,118 @@
 
     </div>
     <div id="courses">
+            <div class="continer">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
 
+                            <div class="course-name">
+                                    <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="course">
+                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+
+                            <div class="course-name">
+                                <h4>Course1</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
     <div id="aboutus">
 
@@ -115,7 +226,17 @@
                             <label for="Message">Your Message</label>
                             <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
                         </div>
+                        <div class="form-group">
+                            <button class="btn btn-info">Send Message</button>
+                        </div>
                     </form>
+                    <hr>
+                    <div class="row">
+                        <div style="text-align: center"><a href="http://projectsofmeblogspot.in">
+                                                                  @  Manish  H. Champaneri
+                                                        </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>

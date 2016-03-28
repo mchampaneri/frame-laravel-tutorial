@@ -65,14 +65,14 @@
         <ul class="sidebar-menu">
             <li class="header">Main Menu</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fa fa-link"></i> <span>DashBoard</span></a></li>
-            <li><a href="#"><i class="fa fa-link"></i> <span>Site Profile</span></a></li>
-            <li><a href="#"><i class="fa fa-link"></i> <span>Personal Profile</span></a></li>
-            <li class="treeview">
+            <li class="{{set_active('admin*')}}"><a href="#"><i class="fa fa-link"></i> <span>DashBoard</span></a></li>
+            <li class="{{set_active('siteinfo*')}}"><a href=""><i class="fa fa-link"></i> <span>Site Profile</span></a></li>
+            <li class="{{set_active('personalinfo*')}}"><a href=""><i class="fa fa-link"></i> <span>Personal Profile</span></a></li>
+            <li class="treeview {{set_active('courses*')}}">
                 <a href="#"><i class="fa fa-link"></i> <span>Courses</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">All Courses</a></li>
-                    <li><a href="#">New Course</a></li>
+                    <li class="{{set_active('courses')}}"><a href="{{route('courses.index')}}">All Courses</a></li>
+                    <li class="{{set_active('courses/create*')}}"><a href="{{route('courses.create')}}">New Course</a></li>
                 </ul>
             </li>
 

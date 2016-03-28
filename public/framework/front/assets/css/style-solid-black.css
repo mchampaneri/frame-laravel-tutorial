@@ -151,8 +151,7 @@ HOME SECTION STYLES
 #home {
 height: 100%;
 text-align: center;
-padding-top: 120px;
-padding-bottom: 60px;
+padding: 5%;
     background-color: #194a77;
 /*background-image: url("../img/site3.jpg");*/
 overflow-y: hidden;
@@ -318,6 +317,7 @@ COURSES SECTION STYLES
 ==============================*/
 
 #courses{
+    padding: 5%;
     height: 100%;
 }
 
@@ -336,3 +336,36 @@ CONTACT US SYMBOL STYLES
     color: #2ba8c6;
 }
 
+/*=============================
+        Course Box
+===============================*/
+
+.course{
+    height:200px;
+    width: 90%;
+    background-color: rgba(230,100,100,0.5);
+    position: relative;
+    padding: 0;
+    margin: 4%;
+    cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.course:hover
+{
+    opacity: 1;
+}
+
+.course-name{
+    position: absolute;
+    background-color: rgba(255,255,255,.3);
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Oswald';
+}

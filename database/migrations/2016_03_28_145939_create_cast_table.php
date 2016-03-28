@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCourcesTable extends Migration
+class CreateCastTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,11 @@ class CreateCourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('casts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('course_id');
             $table->string('name');
+            $table->string('url');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateCourcesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('courses');
+        Schema::drop('casts');
     }
 }
