@@ -13,7 +13,22 @@
 
 
 Route::get('/',function() {
-    return view('front.index');
+    $courses = App\Course::all();
+    $site = App\Site::where('active',1);
+    return view('front.index')->with(['courses'=>$courses,
+                                        'site'=>$site]);
+});
+
+Route::get('view/{id}',function($id){
+    $course = App\Course::find($id);
+    return view('front.course')->with(['course'=>$course]);
+});
+
+Route::get('view/{id1}/{id2}',function($id1,$id2){
+    $course = App\Course::find($id1);
+    $cast = App\Cast::find($id2);
+    return view('front.course')->with(['course'=>$course,
+                                        'cast'=>$cast]);
 });
 Route::get('/admin', function () {
     return view('admin.dashboard');
@@ -32,4 +47,5 @@ Route::get('/admin', function () {
 
 Route::group(['middleware' => ['web']], function () {
     Route::resource('courses','CourseController');
+    Route::resource('casts','CastController');
 });

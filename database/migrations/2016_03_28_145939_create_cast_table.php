@@ -14,9 +14,10 @@ class CreateCastTable extends Migration
     {
         Schema::create('casts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('course_id');
+            $table->integer('course_id')->unsigned();
             $table->string('name');
             $table->string('url');
+            $table->foreign('course_id')->references('id')->on('courses');
             $table->timestamps();
         });
     }

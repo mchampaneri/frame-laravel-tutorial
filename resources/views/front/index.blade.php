@@ -80,114 +80,23 @@
     <div id="courses">
             <div class="continer">
                 <div class="row">
+                    @if(isset($courses))
+                    @foreach($courses as $course)
                     <div class="col-md-3">
+                        <a href="{{url('/view/'.$course->id)}}">
                         <div class="course">
                             <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
 
                             <div class="course-name">
-                                    <h4>Course1</h4>
+                                    <h4>{{ $course->name }}</h4>
                             </div>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
-
-                            <div class="course-name">
-                                <h4>Course1</h4>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                    @else
+                        <h4> Sorry! No Courses At This Moment </h4>
+                    @endif
                 </div>
             </div>
     </div>

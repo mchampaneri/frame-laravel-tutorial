@@ -17,7 +17,8 @@
                     <h3 class="box-title">Update Course</h3>
                 </div>
                 <div class="box-body">
-                    <form action="">
+                    <form >
+                       {{ csrf_field()  }}
                         <div class="form-group">
                             <label for="Course Name">Course Name</label>
                             <input type="text" name="name" value="{{$course->name}}" class="form-control">
@@ -40,7 +41,10 @@
                      <h3 class="box-title">Add youtube Casts To course</h3>
                 </div>
                 <div class="box-body">
-                    <form action="">
+                    <form action="{{route('casts.store')}}" method="post">
+
+                        {{ csrf_field()  }}
+                        <input type="hidden" name="course_id" value="{{$course->id}}" >
                         <div class="form-group">
                             <label for="New Cast">Add New Youtube Cast</label>
                             <input type="text" name="name" placeholder="Title For Screen Cast" class="form-control">
@@ -50,11 +54,11 @@
                             <input type="text" name="url" placeholder="http://www.youtu.be/embded/***" class="form-control">
                         </div>
                         <div class="form-group pull-right">
-                            <submit class="btn btn-primary">Add This Cast </submit>
+                            <input type="submit" class="btn btn-primary">
                         </div>
                     </form>
                     <!-- Cast List starts here -->
-                    @if(isset('casts'))
+                    @if(isset($casts))
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -64,17 +68,23 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($casts as $cast)
                                 <tr>
                                     <td>
-                                        Some Name
+                                        {{ $cast->name }}
                                     </td>
                                     <td>
-                                        http://******
+                                       {{ $cast->url }}
                                     </td>
                                     <td>
-
+                                        <form action="{{route('casts.destroy',['id'=>$cast->id])}}" method="post">
+                                            {{ csrf_field() }}
+                                            <input type="hidden" name="_method" value="delete">
+                                            <input type="submit" class="btn btn-danger" value="Remove">
+                                        </form>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     @else

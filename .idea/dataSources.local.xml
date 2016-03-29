@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - framew1@localhost" uuid="1e983145-d7a1-477b-ad6c-6655d0d51b9d">
+    <data-source name="MySQL - site@localhost" uuid="f9eea992-04b0-4454-891f-9240b1618bbf">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>framew1.*</schema-pattern>
-      <default-schemas>framew1.*</default-schemas>
+      <schema-pattern>site.*</schema-pattern>
+      <default-schemas>site.*</default-schemas>
     </data-source>
   </component>
 </project>

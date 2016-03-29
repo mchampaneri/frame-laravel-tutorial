@@ -14,6 +14,11 @@ class CreatSiteDb extends Migration
     {
         Schema::create('site', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('brand');
+            $table->tinyInteger('active');
+            $table->string('facebook_url');
+            $table->string('google_plus_url');
+            $table->string('twitter_url');
             $table->timestamps();
         });
     }

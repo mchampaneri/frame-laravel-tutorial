@@ -43,9 +43,10 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::findorfail($id);
-        $casts = Cast::
+        $casts = $course->casts();
         return view('admin.course.screencast.index')->with([
-                                                        'course'=>$course
+                                                        'course'=>$course,
+                                                        'casts'=>$casts
                                                         ]);
     }
 

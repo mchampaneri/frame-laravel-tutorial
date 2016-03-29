@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    public  function  casts()
+    public  function casts()
     {
-        return $this->hasMany('Cast');
+        return $this->hasMany('App\Cast')->get();
     }
 
 }

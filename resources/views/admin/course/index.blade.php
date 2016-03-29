@@ -37,7 +37,7 @@
                                     <form action="{{route('courses.destroy',['id'=>$course->id])}}" method="post">
                                         {{ csrf_field() }}
                                         <input type="hidden" name="_method" value="delete">
-                                        <a href="#" class="btn btn-primary">Update Course</a>
+                                        <a href="{{route('courses.edit',['id'=>$course->id])}}" class="btn btn-primary">Update Course</a>
                                         <input type="submit" class="btn btn-danger" value="Remove"/>
                                     </form>
                                 </td>

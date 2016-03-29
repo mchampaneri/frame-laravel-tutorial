@@ -9,7 +9,7 @@
 <!-- STYLES FOR VIEWPORT ANIMATION -->
 <link href="{{asset('framework/front/assets/css/animations.min.css')}}" rel="stylesheet" />
 <!-- CUSTOM CSS -->
-<link href="{{asset('framework/front/assets/css/style-solid-black.css')}}" rel="stylesheet" />
+<link href="{{asset('framework/front/assets/css/style.css')}}" rel="stylesheet" />
 <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
