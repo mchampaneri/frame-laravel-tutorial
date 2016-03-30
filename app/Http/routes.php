@@ -13,10 +13,18 @@
 
 
 Route::get('/',function() {
+    $site_name = Config::get('site.site_name');
+    $twitter_url = Config::get('site.twitter_url');
+    $facebook_url = Config::get('site.facebook_url');
+    $google_plus_url = Config::get('site.google_plus_url');
     $courses = App\Course::all();
-    $site = App\Site::where('active',1);
-    return view('front.index')->with(['courses'=>$courses,
-                                        'site'=>$site]);
+
+    return view('front.index')->with([  'courses'=>$courses,
+                                        'site_name'=>$site_name,
+                                        'twitter_url'=>$twitter_url,
+                                        'facebook_url'=>$facebook_url,
+                                        'google_plus_url'=>$google_plus_url
+                                ]);
 });
 
 Route::get('view/{id}',function($id){
@@ -32,6 +40,29 @@ Route::get('view/{id1}/{id2}',function($id1,$id2){
 });
 Route::get('/admin', function () {
     return view('admin.dashboard');
+});
+Route::get('/siteprofile',['as'=>'siter',function(){
+    $site_name = Config::get('site.site_name');
+    $twitter_url = Config::get('site.twitter_url');
+    $facebook_url = Config::get('site.facebook_url');
+    $google_plus_url = Config::get('site.google_plus_url');
+    return view('admin.profile.site')->with([
+                                            'site_name'=>$site_name,
+                                            'twitter_url'=>$twitter_url,
+                                            'facebook_url'=>$facebook_url,
+                                            'google_plus_url'=>$google_plus_url
+                                    ]);
+}]);
+
+Route::post('/setsiteprofile',function() {
+    $input = Request::all();
+    Config::write('site',['site_name'=>$input['site_name'],
+                          'twitter_url'=>$input['twitter_url'],
+                          'facebook_url'=>$input['facebook_url'],
+                          'google_plus_url'=>$input['google_plus_url']
+        ]);
+
+    return redirect()->route('siter');
 });
 
 /*

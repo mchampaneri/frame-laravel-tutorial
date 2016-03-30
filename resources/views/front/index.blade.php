@@ -61,13 +61,13 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <a href="">
+                        <a href="{{$facebook_url}}">
                             <i class="fa fa-facebook-square la-sym" ></i>
                         </a>
-                        <a href="">
+                        <a href="{{$google_plus_url}}">
                             <i class="fa fa-google-plus-square la-sym" ></i>
                         </a>
-                        <a href="">
+                        <a href="{{$twitter_url}}">
                             <i class="fa fa-twitter-square la-sym" ></i>
                         </a>
                     </div>

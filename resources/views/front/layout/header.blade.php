@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand" href="#">
 
-                BRAND
+                {{ $site_name }}
 
             </a>
         </div>
