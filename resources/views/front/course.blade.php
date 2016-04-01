@@ -17,9 +17,9 @@
                 <div style="background-color: #353A40; box-shadow: 2px 3px 2px #444; padding: 20px; margin-bottom: 40px">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-12">
                                 <div class="brand">
-                                    <a href="{{url('/')}}"><h2> BRAND <small class="handwritten">Learning The Skills</small> </h2> </a>
+                                    <a href="{{url('/')}}"><h2> {{$site_name}} <small class="handwritten">Learning The Skills</small> </h2> </a>
                                 </div>
                             </div>
                         </div>

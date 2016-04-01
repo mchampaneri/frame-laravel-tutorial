@@ -2,7 +2,7 @@
 
 
 @section('title')
-    SkillBooster
+    {{$site_name}}
 @endsection
 @section('preload')
 @endsection
@@ -18,7 +18,7 @@
 
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="{{url('framework/front/assets/img/Fl-Studio-logo-vector.png')}}" alt="">
+                                <h1 style="font-size: 7em; color: #000"> Logo </h1>
                                 <h2>
                                     Learn with us.
                                 </h2>

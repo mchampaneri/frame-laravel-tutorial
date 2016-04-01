@@ -17,8 +17,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#courses">COURSES</a></li>
-                <li><a href="#aboutus">ABOUT US</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#aboutus">RESOURCES</a></li>
+                <li><a href="#contact">FEEDBACK</a></li>
             </ul>
         </div>
 

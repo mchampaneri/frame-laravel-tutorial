@@ -9,6 +9,9 @@ use App\Http\Requests;
 
 class CastController extends Controller
 {
+
+
+
     public function store(Request $request)
     {
         $cast = new Cast();
