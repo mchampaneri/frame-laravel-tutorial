@@ -26,6 +26,7 @@ class CourseController extends Controller
     {
         $course = new Course();
         $course->name = $request->name;
+        $course->description = $request->description;
         $course->save();
 
         return redirect()->route('courses.edit',['id'=>$course->id]);
@@ -50,7 +51,12 @@ class CourseController extends Controller
                                                         ]);
     }
 
-
-
-
+    public  function  update(Request $request,$id)
+    {
+        $course = Course::find($id);
+        $course->name = $request->name;
+        $course->description = $request->description;
+        $course->save();
+        return redirect()->route('courses.index');
+    }
 }

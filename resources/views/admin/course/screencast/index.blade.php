@@ -17,19 +17,20 @@
                     <h3 class="box-title">Update Course</h3>
                 </div>
                 <div class="box-body">
-                    <form >
+                    <form action="{{route('courses.update',['id'=>$course->id])}}" method="post">
                        {{ csrf_field()  }}
+                        <input type="hidden" value="put" name="_method">
                         <div class="form-group">
                             <label for="Course Name">Course Name</label>
                             <input type="text" name="name" value="{{$course->name}}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="Description">Description</label><br>
-                            <textarea name="description" id="" class="form-control" cols="30" rows="10"></textarea>
+                            <textarea name="description"  class="form-control" cols="30" rows="10"></textarea>
                         </div>
 
                         <div class="form-group pull-right">
-                            <submit class="btn btn-primary">Update Course Detail !</submit>
+                            <input type="submit" class="btn btn-primary" value="Update Course!"/>
                         </div>
                     </form>
                 </div>
@@ -54,7 +55,7 @@
                             <input type="text" name="url" placeholder="http://www.youtu.be/embded/***" class="form-control">
                         </div>
                         <div class="form-group pull-right">
-                            <input type="submit" class="btn btn-primary">
+                            <input type="submit" class="btn btn-primary" value="Add Screen Cast!"/>
                         </div>
                     </form>
                     <!-- Cast List starts here -->

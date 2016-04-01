@@ -18,41 +18,22 @@
 
                         <div class="carousel-inner">
                             <div class="item active">
-
-                                <h3 style="color: #fff">
-                                   Connect With Us
-                                </h3>
-                                <button class="btn btn-success"> Hello </button>
+                                <img src="{{url('framework/front/assets/img/Fl-Studio-logo-vector.png')}}" alt="">
+                                <h2>
+                                    Learn with us.
+                                </h2>
+                                <h4>
+                                    What We Know , You Should Know
+                                </h4>
                             </div>
-                            <div class="item">
-                                <h3 style="color: #fff">
-                                    Learn Much
-                                </h3>
-                                <p>
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit
-                                    Lorem ipsumdolor sitamet, consect adipiscing elit.
-                                </p>
-                            </div>
+                           
                         </div>
                     </div>
 
 
                 </div>
             </div>
+            @if($facebook_url!=''||$google_plus_url!=''||$twitter_url!='')
             <div class="social" style="position: absolute; bottom: 20px;">
                 <div class="row">
                     <div class="col-sm-12">
@@ -61,31 +42,39 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
+                        @if($facebook_url!='')
                         <a href="{{$facebook_url}}">
                             <i class="fa fa-facebook-square la-sym" ></i>
                         </a>
+                        @endif
+                        @if($google_plus_url!='')
                         <a href="{{$google_plus_url}}">
                             <i class="fa fa-google-plus-square la-sym" ></i>
                         </a>
+                        @endif
+                        @if($twitter_url!='')
                         <a href="{{$twitter_url}}">
                             <i class="fa fa-twitter-square la-sym" ></i>
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>
-
-        </div>
-
+            @endif
     </div>
+    </div>
+
+
     <div id="courses">
             <div class="continer">
                 <div class="row">
                     @if(isset($courses))
+                        <h3> Courses </h3><h5>Provided by Us With Proud</h5>
                     @foreach($courses as $course)
                     <div class="col-md-3">
                         <a href="{{url('/view/'.$course->id)}}">
                         <div class="course">
-                            <img src="{{asset('/framework/front/assets/img/1.jpg')}}" alt="Course1" height="100%" width="100%">
+                            <img src="{{asset('/framework/front/assets/img/fl-logo.ico')}}" alt="Course1" height="100%" width="90%">
 
                             <div class="course-name">
                                     <h4>{{ $course->name }}</h4>

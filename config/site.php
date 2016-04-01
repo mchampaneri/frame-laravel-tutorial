@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'site_name' => '34234',
-    'twitter_url' => '567',
-    'google_plus_url' => '567',
-    'facebook_url' => '567',
+    'site_name' => 'FruitySound',
+    'twitter_url' => 'twitter.com',
+    'google_plus_url' => 'yahoo.com',
+    'facebook_url' => 'facebook.com',
     ];

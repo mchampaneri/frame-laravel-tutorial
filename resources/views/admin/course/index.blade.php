@@ -30,7 +30,7 @@
                             @foreach($courses as $course)
                             <tr>
                                 <td>{{$course->name}}</td>
-                                <td>This is a Good Course</td>
+                                <td>{{$course->description}}</td>
                                 <td>10</td>
                                 <td>1200</td>
                                 <td>
